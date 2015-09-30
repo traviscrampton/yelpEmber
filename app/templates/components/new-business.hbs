@@ -1,0 +1,26 @@
+{{yield}}
+
+{{#if addNewBusiness}}
+<h1>Add A New Business</h1>
+  <form>
+    <div class="form-group">
+      <label for="businessname">Name Of Business</label>
+      {{input class="form-control" value=businessname id="businessname"}}
+    </div>
+
+    <div class="form-group">
+      <label for="city">Full Address:</label>
+      {{input rows=3 class="form-control" value=city id="city"}}
+    </div>
+
+    <div class="form-group">
+      <label for="state">Full Address:</label>
+      {{input rows=3 class="form-control" value=state id="state"}}
+    </div>
+
+    <div class="form-group">
+      <label for="zipcode">Full Address:</label>
+      {{input rows=3 class="form-control" value=zipcode id="zipcode"}}
+    </div>
+  </form>
+  {{/if}}

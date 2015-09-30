@@ -1,9 +1,13 @@
-<h2>Bidness's</h2>
-<ul>
-  {{#each model as |business|}}
-  {{business-tile business=business}}
-  {{/each}}
-</ul>
+<div class="container business col-md-12">
 
-{{new-business save="save"}}
-{{outlet}}
+    <h2>Business'</h2>
+    <ul>
+      {{#each model as |business|}}
+      {{business-tile business=business}}
+      {{/each}}
+    </ul>
+
+    {{new-business save="save"}}
+
+    <br><br><br><br><br><button class="btn btn-danger"{{action "showBidnessForm"}}>Add A Business</button>
+</div>

@@ -1,0 +1,9 @@
+<h2>Bidness's</h2>
+<ul>
+  {{#each model as |business|}}
+  {{business-tile business=business}}
+  {{/each}}
+</ul>
+
+{{new-business save="save"}}
+{{outlet}}

@@ -3,11 +3,13 @@
     <h2>Business'</h2>
     <ul>
       {{#each model as |business|}}
-      {{business-tile business=business}}
+        {{business-tile business=business}}
       {{/each}}
     </ul>
 
+    {{new-city save="save"}}
+
     {{new-business save="save"}}
 
-    <br><br><br><br><br><button class="btn btn-danger"{{action "showBidnessForm"}}>Add A Business</button>
+
 </div>

@@ -1,1 +1,41 @@
 {{yield}}
+
+{{#if showCityForm}}
+
+<div class="form-group">
+  <label for="city">Select A City</label>
+  {{#x-select class="form-control" action="selectCity" id="city" default="Select City"}}
+    {{#each model.cities as |city|}}
+      {{#x-option value=city}}{{city.cityName}}{{/x-option}}
+    {{/each}}
+  {{/x-select}}
+  <br>
+
+  <div class="form-group">
+    <label for="businessname">Name Of Business</label>
+    {{input class="form-control" value=businessname id="businessname"}}
+  </div>
+
+  <div class="form-group">
+    <label for="streetAddress">Street Address</label>
+    {{input  class="form-control"  value=streetAddress id="streetAddress"}}
+  </div>
+
+  <div class="form-group">
+    <label for="bidnesstype">Business Type</label>
+    {{#x-select class="form-control" id="bidnesstype" action="selectType"}}
+      {{#x-option value="food"}}Food{{/x-option}}
+      {{#x-option value="Clothing"}}Clothing{{/x-option}}
+      {{#x-option value="Transport"}}Transport{{/x-option}}
+      {{#x-option value="Auto"}}Auto{{/x-option}}
+      {{#x-option value="Art"}}Art{{/x-option}}
+      {{#x-option value="Education"}}Education{{/x-option}}
+    {{/x-select}}
+  </div>
+
+  <button class="btn btn-danger" {{action "saveCity"}}>Add Da Bidness</button>
+</div>
+
+{{else}}
+<button class="btn btn-danger"{{action "showCityDropdown"}}>Select Your City</button>
+{{/if}}

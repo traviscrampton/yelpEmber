@@ -9,19 +9,10 @@
     </div>
 
     <div class="form-group">
-      <label for="city">City</label>
-      {{input  class="form-control" value=city id="city"}}
+      <label for="streetAddress">Street Address</label>
+      {{input  class="form-control"  id="streetAddress"}}
     </div>
 
-    <div class="form-group">
-      <label for="state">State</label>
-      {{input  class="form-control"  id="state"}}
-    </div>
-
-    <div class="form-group">
-      <label for="zipcode">Zip-Code</label>
-      {{input  class="form-control" value=zipcode id="zipcode"}}
-    </div>
     <div class="form-group">
       <label for="bidnesstype">Business Type</label>
       <select class="form-control" id="bidnesstype">
@@ -37,6 +28,5 @@
     <button class="btn btn-danger">Add Dis Bidness</button>
   </form>
   {{else}}
-  <button class="btn btn-danger"{{action "showCityDropdown"}}>Select Your City</button>
   <button class="btn btn-danger"{{action "showBidnessForm"}}>Add A Business</button>
   {{/if}}

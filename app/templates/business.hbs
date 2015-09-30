@@ -2,14 +2,13 @@
 
     <h2>Business'</h2>
     <ul>
-      {{#each model as |business|}}
+      {{#each model.business as |business|}}
         {{business-tile business=business}}
       {{/each}}
     </ul>
 
-    {{new-city save="save"}}
+    {{new-city model=model saveCity="saveCity"}}
 
-    {{new-business save="save"}}
 
 
 </div>

@@ -4,7 +4,8 @@
 
 <div class="form-group">
   <label for="city">Select A City</label>
-  {{#x-select class="form-control" action="selectCity" id="city" default="Select City"}}
+  {{#x-select class="form-control" action="selectCity" id="city" default=city}}
+    <option>Pick a City</option>
     {{#each model.cities as |city|}}
       {{#x-option value=city}}{{city.cityName}}{{/x-option}}
     {{/each}}
@@ -24,6 +25,7 @@
   <div class="form-group">
     <label for="bidnesstype">Business Type</label>
     {{#x-select class="form-control" id="bidnesstype" action="selectType"}}
+      <option>Pick a Business Type </option>
       {{#x-option value="food"}}Food{{/x-option}}
       {{#x-option value="Clothing"}}Clothing{{/x-option}}
       {{#x-option value="Transport"}}Transport{{/x-option}}

@@ -19,3 +19,12 @@
 .business{
   text-align: center;
 }
+
+li{
+  list-style-type: none;
+  text-align: center;
+}
+
+.jt-button {
+  margin-left: 5px;
+}

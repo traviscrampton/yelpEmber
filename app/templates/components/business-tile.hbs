@@ -1,1 +1,9 @@
 {{yield}}
+
+<li{{action "showDaBidness"}}>{{city.cityName}}</li>
+
+{{#if showDaBidnessForm}}
+  {{#each city.businesses as |business|}}
+    <li>{{business.businessName}}<button class="btn btn-warning jt-button" {{action "hideDaBidness"}}>Hide</button></li>
+  {{/each}}
+{{/if}}

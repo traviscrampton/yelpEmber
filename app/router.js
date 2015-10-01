@@ -7,6 +7,9 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('business');
+  this.route('review', {path: '/review/:business_id'});
+
+
 });
 
 export default Router;

@@ -1,5 +1,8 @@
 .heda{
-  background-color: red !important;
+  background-color: darkred !important;
+}
+.body{
+  background-color: lightgray;
 }
 .navigation{
   text-align: center;
@@ -27,4 +30,11 @@ li{
 
 .jt-button {
   margin-left: 5px;
+}
+.well{
+  background-color: red;
+}
+.jumbotron{
+  background-color: darkred;
+  color: white;
 }

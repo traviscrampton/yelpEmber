@@ -1,0 +1,33 @@
+{{yield}}
+
+<legend><h1>{{model.businessName}} {{model.streetAddress}} in {{model.cityName.cityName}}</h1></legend>
+
+{{#if reviewForm}}
+  <form>
+    <div class="form-group">
+      <label for="name">Your Name M8</label>
+      {{input id="name" value=name class="form-control"}}
+    </div>
+    <div class="form-group">
+      <label for="description">Your Description M8</label>
+      {{textarea row=4 id="description" value=description class="form-control"}}
+    </div>
+    <button class="btn btn-danger"{{action "saveReview" model}}>Submit Review</button>
+  </form>
+{{else}}
+  <button {{action "showReviewForm"}}class="btn btn-danger">Add A review</button>
+  <br><br>
+{{/if}}
+<br>
+
+    <ul>
+    {{#each model.reviews as |review|}}
+  <div class="jumbotron">
+      <div class="well">
+        <li>{{review.name}}</li>
+      </div>
+    <li>{{review.description}}</li>
+  </div>
+    <br><br>
+    {{/each}}
+    </ul>

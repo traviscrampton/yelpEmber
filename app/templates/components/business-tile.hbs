@@ -4,6 +4,6 @@
 
 {{#if showDaBidnessForm}}
   {{#each city.businesses as |business|}}
-    <li>{{business.businessName}}<button class="btn btn-warning jt-button" {{action "hideDaBidness"}}>Hide</button></li>
+    <li>{{#link-to 'review' business.id}}{{business.businessName}}{{/link-to}}<button class="btn btn-warning jt-button" {{action "hideDaBidness"}}>Hide</button></li>
   {{/each}}
 {{/if}}

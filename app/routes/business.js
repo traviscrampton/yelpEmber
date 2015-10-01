@@ -12,7 +12,6 @@ export default Ember.Route.extend({
   actions: {
     saveCity(params) {
       var newBusiness = this.store.createRecord('business', params);
-      debugger;
       var city = params.cityName;
       city.get('businesses').addObject(newBusiness);
       newBusiness.save().then(function() {
